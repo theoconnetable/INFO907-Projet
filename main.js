@@ -133,6 +133,14 @@ function getAllInstruments(level) {
     }
 }
 
+function getInstrumentsByKey(level) {
+    if(typeof level === "string") {
+        return [level];
+    } else {
+        return Object.values(level).flatMap(value => getAllInstruments(value))
+    }
+}
+
 function findParent(json, level, path = []) {
     for (let key in json){
         if (key === level) {
@@ -205,6 +213,35 @@ function getSubInstrument(json) {
     return res;
 }
 
+function displaySubInstruments(json) {
+    tab = getSubInstrument(json);
+    if (tab === undefined) {
+        console.log("No parent found");
+    } else {
+        const container = document.getElementById("children-container");
+        tab.forEach(element => {
+            // Créer un bouton
+            const parent = document.createElement("button");
+            parent.textContent = element;
+            parent.style.margin = "5px";
+
+            // Ajouter un événement clic au bouton
+            parent.addEventListener("click", () => {
+                while (container.firstChild) {
+                    container.firstChild.remove()
+                }
+                displaySubInstruments(json[element]);
+                displayInstruments(getAllInstruments(json[element]));
+            });
+        
+            // Ajouter le bouton au conteneur
+        container.appendChild(parent);
+        });
+    }
+}
+
+displaySubInstruments(instruments)
+
 function displayInstruments(instruments) {
     container = document.querySelector("#instruments-container")
 
@@ -212,7 +249,7 @@ function displayInstruments(instruments) {
         container.firstChild.remove()
     }
 
-    instruments.forEach(instrument => {
+    instruments.sort().forEach(instrument => {
         listItem = document.createElement("li");
         listItem.textContent = instrument;
         container.appendChild(listItem);
