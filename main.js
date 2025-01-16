@@ -1,132 +1,129 @@
 const instruments = {
-    "vent":{
-      "bois":{
-        "anche":{
-            "libre": "Accordéon",
-            "simple":{
-                "clarinette":{
-                    "transposition_sixte_mineur_en_dessous":"Petite clarinette sopranino (lab)",
-                    "transposition_tierce_mineur_en_dessous":"Petite clarinette (mib)",
-                    "transposition_seconde_en_dessous":"Petite clarinette (ré)",
-                    "aucune_transposition":"Clarinette soprano (ut)",
-                    "transposition_seconde_majeure_au_dessus":"Clarinette soprano (sib)",
-                    "transposition_tierce_mineur_au_dessus":"Clarinette soprano (la)",
-                    "transposition_sixte_majeur_au_dessus":"Clarinette alto (mib)",
-                    "transposition_octave_et_seconde_majeure_au_dessus":"Clarinette basse",
-                    "transposition_octabe_et_sixte_majeure_au_dessus":"Clarinette contre-alto",
-                    "transposition_deux_octave_et_seconde_majeure_au_dessus":"Clarinette contrebasse"
-                },
-                "saxophone":{
-                    "transposition_seconde_majeure_au_dessus":"Saxophone soprano",
-                    "transposition_sixte_majeure_en_dessous":"Saxophone alto",
-                    "transposition_neuvieme_majeure_en_dessous":"Saxophone tenor",
-                    "transposition_trezieme_majeure_en_dessous":"Saxophone baryton"
-                }
-                
-            },
-            "double": "haubois"
-        },
-        "embouchure":{
-            "multiple":"Flûte de pan",
-            "laterale": "Flûte traversière traditionnelle",
-            "ronde":"Xun (chinois)",
-            "encoche_fixe":"Flûte à encoche",
-            "arete_oblique": "Flûte oblique",
-            "a_conduit": {
-                "tubulaire": {
-                    "se_coulisse" : "Flûte à coulisse",
-                    "trous_de_jeu" : "Flûte à bec"
-                },
-                "globulaire" : "Ocarina",
-                "sifflet" : "Sifflet à nez"
-            }
-        }
-      },
-      "cuivre":{
-        "cylindrique":{
-            "coulisse":{
-                "si_bemol":{
-                    "tessiture_aigue":"Trombone soprano",
-                    "tessiture_standard":"Trombone tenor",
-                    "tessiture_basse" : "Trombone basse"
-                },
-                "mi_bemol" : "Trombone alto"
-            },
-            "pistons":{
-                "tessiture_aigue":"Trompette",
-                "tessiture_basse":"Trombone à pistons"
-            }
-        },
-        "conico_cylindrique":{
-            "pistons":{
-                "si_bemol": "Euphonium",
-                "fa":"Tuba basse",
-                "ut":"Contretuba"
-            },
-            "palettes":"Cor"
-        }
-
-      }  
-    },
-    "percussions":{
-        "idiophone" : {
-            "frapper" : {
-                "métal" : {
-                    "hauteur_reglable" :{
-                        "avec_resonnateur_tubulaire" : {
-                            "horizontale" : "Vibraphone",
-                            "verticale" : "Carillon_tubulaire"
-                        },
-                        "sans_resonnateur_tubulaire" : "Glockenspiel"
+    "instruments":{
+        "vent":{
+        "bois":{
+            "anche":{
+                "libre": "Accordéon",
+                "simple":{
+                    "clarinette":{
+                        "transposition_sixte_mineur_en_dessous":"Petite clarinette sopranino (lab)",
+                        "transposition_tierce_mineur_en_dessous":"Petite clarinette (mib)",
+                        "transposition_seconde_en_dessous":"Petite clarinette (ré)",
+                        "aucune_transposition":"Clarinette soprano (ut)",
+                        "transposition_seconde_majeure_au_dessus":"Clarinette soprano (sib)",
+                        "transposition_tierce_mineur_au_dessus":"Clarinette soprano (la)",
+                        "transposition_sixte_majeur_au_dessus":"Clarinette alto (mib)",
+                        "transposition_octave_et_seconde_majeure_au_dessus":"Clarinette basse",
+                        "transposition_octabe_et_sixte_majeure_au_dessus":"Clarinette contre-alto",
+                        "transposition_deux_octave_et_seconde_majeure_au_dessus":"Clarinette contrebasse"
                     },
-                    "hauteur_fixe":{
-                        "percussion_direct" : "Cymbales",
-                        "percussion_indirect" : {
-                            "baguette_metalique" :"Triangle",
-                            "baguette_bois" : "Cloches"
+                    "saxophone":{
+                        "transposition_seconde_majeure_au_dessus":"Saxophone soprano",
+                        "transposition_sixte_majeure_en_dessous":"Saxophone alto",
+                        "transposition_neuvieme_majeure_en_dessous":"Saxophone tenor",
+                        "transposition_trezieme_majeure_en_dessous":"Saxophone baryton"
+                    }
+                    
+                },
+                "double": "haubois"
+            },
+            "embouchure":{
+                "multiple":"Flûte de pan",
+                "laterale": "Flûte traversière traditionnelle",
+                "ronde":"Xun (chinois)",
+                "encoche_fixe":"Flûte à encoche",
+                "arete_oblique": "Flûte oblique",
+                "a_conduit": {
+                    "tubulaire": {
+                        "se_coulisse" : "Flûte à coulisse",
+                        "trous_de_jeu" : "Flûte à bec"
+                    },
+                    "globulaire" : "Ocarina",
+                    "sifflet" : "Sifflet à nez"
+                }
+            }
+        },
+        "cuivre":{
+            "cylindrique":{
+                "coulisse":{
+                    "si_bemol":{
+                        "tessiture_aigue":"Trombone soprano",
+                        "tessiture_standard":"Trombone tenor",
+                        "tessiture_basse" : "Trombone basse"
+                    },
+                    "mi_bemol" : "Trombone alto"
+                },
+                "pistons":{
+                    "tessiture_aigue":"Trompette",
+                    "tessiture_basse":"Trombone à pistons"
+                }
+            },
+            "conico_cylindrique":{
+                "pistons":{
+                    "si_bemol": "Euphonium",
+                    "fa":"Tuba basse",
+                    "ut":"Contretuba"
+                },
+                "palettes":"Cor"
+            }
+
+        }  
+        },
+        "percussions":{
+            "idiophone" : {
+                "frapper" : {
+                    "métal" : {
+                        "hauteur_reglable" :{
+                            "avec_resonnateur_tubulaire" : {
+                                "horizontale" : "Vibraphone",
+                                "verticale" : "Carillon_tubulaire"
+                            },
+                            "sans_resonnateur_tubulaire" : "Glockenspiel"
+                        },
+                        "hauteur_fixe":{
+                            "percussion_direct" : "Cymbales",
+                            "percussion_indirect" : {
+                                "baguette_metalique" :"Triangle",
+                                "baguette_bois" : "Cloches"
+                            }
+                        }
+                    },
+                    "bois":{
+                        "hauteur_reglable":{
+                            "avec_resonnateur_tubulaire":"Marimba",
+                            "sans_resonnateur_tubulaire" : "Xylophone"
+                        },                            
+                        "hauteur_fixe" : {
+                            "sans_caisse_resonance" : "Claves",
+                            "avec_caisse_resonance" : "Woodblock"
                         }
                     }
                 },
-                "bois":{
-                    "hauteur_reglable":{
-                        "avec_resonnateur_tubulaire":"Marimba",
-                        "sans_resonnateur_tubulaire" : "Xylophone"
-                    },                            
-                    "hauteur_fixe" : {
-                        "sans_caisse_resonance" : "Claves",
-                        "avec_caisse_resonance" : "Woodblock"
+                "secouer": {
+                    "bois" : "Maracas",
+                    "metal" : {
+                        "bille" : {
+                            "exterieur" : "Cabassa",
+                            "interieur" : "Shaker"
+                        },
+                        "cymbalette" : "Tambour de Basque"
                     }
+                },
+                "racler" : {
+                    "bois_contre_bois" : "Guiro",
+                    "metal_contre_bois" : "Cabassa"
                 }
-            },
-            "secouer": {
-                "bois" : "Maracas",
-                "metal" : {
-                    "bille" : {
-                        "exterieur" : "Cabassa",
-                        "interieur" : "Shaker"
-                    },
-                    "cymbalette" : "Tambour de Basque"
+            }, 
+            "membranophone" :{
+                "tambours" : {
+                    "main" : "Congas",
+                    "baguette" : "Batterie",
+                    "mailloche" : "Timbales"
                 }
-            },
-            "racler" : {
-                "bois_contre_bois" : "Guiro",
-                "metal_contre_bois" : "Cabassa"
-            }
-        }, 
-        "membranophone" :{
-            "tambours" : {
-                "main" : "Congas",
-                "baguette" : "Batterie",
-                "mailloche" : "Timbales"
             }
         }
     }
 }
-
-
-//const instruments = require("./data.json")
-
-//console.log(instruments)
 
 function getAllInstruments(level) {
     if(typeof level === "string") {
@@ -137,7 +134,6 @@ function getAllInstruments(level) {
 }
 
 function findParent(json, level, path = []) {
-    //console.log(path);
     for (let key in json){
         if (key === level) {
             path.push(key);
@@ -153,6 +149,18 @@ function findParent(json, level, path = []) {
             }
         }
     }
+}
+
+function getValueFromJSON(json, keys) {
+    let result = json;
+    for (let key of keys) {
+        if (result[key] !== undefined) {
+            result = result[key];
+        } else {
+            return null;
+        }
+    }
+    return result;
 }
 
 function display_parents(level) {
@@ -173,6 +181,9 @@ function display_parents(level) {
                     container.firstChild.remove()
                 }
                 display_parents(element);
+
+                new_json = getValueFromJSON(instruments, tab)
+                displayInstruments(getAllInstruments(new_json));
             });
         
             // Ajouter le bouton au conteneur
