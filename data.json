@@ -9,12 +9,12 @@
                     "transposition_tierce_mineur_en_dessous":"Petite clarinette (mib)",
                     "transposition_seconde_en_dessous":"Petite clarinette (ré)",
                     "aucune_transposition":"Clarinette soprano (ut)",
-                    "transposition_seconde_majeure_au_dessus":"clarinette soprano (sib)",
-                    "transposition_tierce_mineur_au_dessus":"clarinette soprano (la)",
-                    "transposition_sixte_majeur_au_dessus":"clarinette alto (mib)",
+                    "transposition_seconde_majeure_au_dessus":"Clarinette soprano (sib)",
+                    "transposition_tierce_mineur_au_dessus":"Clarinette soprano (la)",
+                    "transposition_sixte_majeur_au_dessus":"Clarinette alto (mib)",
                     "transposition_octave_et_seconde_majeure_au_dessus":"Clarinette basse",
                     "transposition_octabe_et_sixte_majeure_au_dessus":"Clarinette contre-alto",
-                    "transposition_deux_octave_et_seconde_majeure_au_dessus":"clarinette contrebasse"
+                    "transposition_deux_octave_et_seconde_majeure_au_dessus":"Clarinette contrebasse"
                 },
                 "saxophone":{
                     "transposition_seconde_majeure_au_dessus":"Saxophone soprano",
