@@ -125,6 +125,9 @@ const instruments = {
     }
 }
 
+let current_json = instruments["instruments"]
+
+
 function getAllInstruments(level) {
     if(typeof level === "string") {
         return [level];
@@ -149,10 +152,12 @@ function findParent(json, level, path = []) {
         }
         else {
             if (typeof json[key] === "object" && json[key] !== null) {
-                res = findParent(json[key], level, path);
-                if ((res !== null) && (res.includes(level))) {
-                    path.unshift(key);
-                    return path
+                let res = findParent(json[key], level, path);
+                if (res) {
+                    if (res.includes(level)){
+                        path.unshift(key);
+                        return path
+                    }
                 }
             }
         }
@@ -177,6 +182,9 @@ function display_parents(level) {
         console.log("No parent found");
     } else {
         const container = document.getElementById("parent-container");
+        while (container.firstChild) {
+            container.firstChild.remove()
+        }
         tab.forEach(element => {
             // Créer un bouton
             const parent = document.createElement("button");
@@ -185,13 +193,9 @@ function display_parents(level) {
 
             // Ajouter un événement clic au bouton
             parent.addEventListener("click", () => {
-                while (container.firstChild) {
-                    container.firstChild.remove()
-                }
-                display_parents(element);
-
-                new_json = getValueFromJSON(instruments, tab)
-                displayInstruments(getAllInstruments(new_json));
+                new_json = getValueFromJSON(current_json, tab)
+                console.log(new_json)
+                actualise_view(new_json,element)
             });
         
             // Ajouter le bouton au conteneur
@@ -200,15 +204,10 @@ function display_parents(level) {
     }
 }
 
-display_parents("anche")
-
-
 function getSubInstrument(json) {
     res = []
     for (let key in json) {
-        if (typeof json[key] === "object" && json[key] !== null) {
-            res.push(key);
-        }
+        res.push(key);
     }
     return res;
 }
@@ -219,6 +218,9 @@ function displaySubInstruments(json) {
         console.log("No parent found");
     } else {
         const container = document.getElementById("children-container");
+        while (container.firstChild) {
+            container.firstChild.remove()
+        }
         tab.forEach(element => {
             // Créer un bouton
             const parent = document.createElement("button");
@@ -227,11 +229,10 @@ function displaySubInstruments(json) {
 
             // Ajouter un événement clic au bouton
             parent.addEventListener("click", () => {
-                while (container.firstChild) {
-                    container.firstChild.remove()
-                }
-                displaySubInstruments(json[element]);
-                displayInstruments(getAllInstruments(json[element]));
+                new_json = json[element]
+                actualise_view(new_json, element)
+                //displaySubInstruments(json[element]);
+                //displayInstruments(getAllInstruments(json[element]));
             });
         
             // Ajouter le bouton au conteneur
@@ -239,8 +240,6 @@ function displaySubInstruments(json) {
         });
     }
 }
-
-displaySubInstruments(instruments)
 
 function displayInstruments(instruments) {
     container = document.querySelector("#instruments-container")
@@ -256,4 +255,15 @@ function displayInstruments(instruments) {
     });
 }
 
-displayInstruments(getAllInstruments(instruments));
+
+
+
+display_parents("instruments")
+displaySubInstruments(current_json)
+displayInstruments(getAllInstruments(current_json));
+
+function actualise_view(new_json,key){
+    display_parents(key)
+    displaySubInstruments(new_json)
+    displayInstruments(getAllInstruments(new_json));
+}

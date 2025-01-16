@@ -1,0 +1,94 @@
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+/* Titres */
+h1, h2, h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: #fff;
+}
+
+/* Conteneurs */
+#parent-container, #children-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Boutons dans les conteneurs */
+#parent-container button, 
+#children-container button {
+    background-color: #fff;
+    color: #6a11cb;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#parent-container button:hover, 
+#children-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#parent-container button:active, 
+#children-container button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Liste des instruments */
+#instruments-container {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+#instruments-container li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#instruments-container li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Liens */
+a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
